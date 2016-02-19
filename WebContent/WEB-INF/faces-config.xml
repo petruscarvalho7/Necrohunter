@@ -1,0 +1,29 @@
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+
+	<application>
+		<!-- Configura o locale (i18n) pt-BR para toda aplicacao. -->
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+		</locale-config>
+
+		<!-- Define o nome do arquivo com as labels e mensagens. 
+		     Note que 'msg' eh a variavel usada nas telas pra recuperar as labels/mensagens. -->
+		<resource-bundle>
+			<base-name>messages_labels</base-name>
+			<var>msg</var>
+		</resource-bundle>
+	</application>
+
+	<!-- Define a navegacao global para a pagina com a lista de funcionarios. -->
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/index.html</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+</faces-config>
